@@ -7,6 +7,7 @@
 
 #include <qtinitproj-lib_global.h>
 #include <controllers/navigation-controller.h>
+#include <controllers/command-controller.h>
 
 namespace qtinitproj{
 namespace controllers {
@@ -21,6 +22,8 @@ class QTINITPROJLIB_EXPORT MasterController : public QObject
 
     Q_PROPERTY(QString ui_welcomeMessage READ welcomeMessage CONSTANT)
     Q_PROPERTY(qtinitproj::controllers::NavigationController* ui_navigationController READ navigationController CONSTANT)
+    Q_PROPERTY(qtinitproj::controllers::CommandController* ui_commandController READ commandController CONSTANT)
+
 
 public:
     explicit MasterController(QObject *parent = nullptr);
@@ -31,6 +34,8 @@ public:
      * @return
      */
     NavigationController* navigationController();
+    CommandController* commandController();
+
 
     const QString& welcomeMessage() const;
 

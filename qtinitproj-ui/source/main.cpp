@@ -4,6 +4,7 @@
 
 #include <controllers/master-controller.h>
 #include <controllers/navigation-controller.h>
+#include <controllers/command-controller.h>
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +14,11 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<qtinitproj::controllers::MasterController>("QTINITPROJ", 1, 0, "MasterController");
     qmlRegisterType<qtinitproj::controllers::NavigationController>("QTINITPROJ", 1, 0, "NavigationController");
+    qmlRegisterType<qtinitproj::controllers::CommandController>("QTINITPROJ", 1, 0, "CommandController");
+
+    qmlRegisterType<qtinitproj::framework::Command>("QTINITPROJ", 1, 0, "Command");
+
+
 
     qtinitproj::controllers::MasterController masterController;
 

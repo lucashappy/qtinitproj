@@ -33,9 +33,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 INCLUDEPATH += source
 
-SOURCES += source/controllers/master-controller.cpp
+SOURCES += source/controllers/master-controller.cpp \
+    source/controllers/command-controller.cpp \
+    source/framework/command.cpp
 
 HEADERS += \
+    source/controllers/command-controller.h \
+    source/framework/command.h \
     source/qtinitproj-lib_global.h \
     source/controllers/master-controller.h \
     source/controllers/navigation-controller.h \

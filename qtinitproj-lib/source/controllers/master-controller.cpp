@@ -9,10 +9,12 @@ public:
     Implementation(MasterController* _masterController) : masterController(_masterController)
     {
         navigationController = new NavigationController(masterController);
+        commandController = new CommandController(masterController, navigationController);
     }
 
     MasterController* masterController{nullptr};
     NavigationController* navigationController{nullptr};
+    CommandController* commandController{nullptr};
     QString welcomeMessage = "Hello World!";
 };
 
@@ -32,7 +34,11 @@ NavigationController* MasterController::navigationController()
 const QString& MasterController::welcomeMessage() const
 {
     return implementation->welcomeMessage;
-    // return "OK";
+}
+
+CommandController *MasterController::commandController()
+{
+    return implementation->commandController;
 }
 
 }}
