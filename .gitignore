@@ -1,3 +1,4 @@
+@@ -0,0 +1,59 @@
 # C++ objects and libs
 *.slo
 *.lo
@@ -50,5 +51,10 @@ compile_commands.json
 
 # QtCreator local machine specific files for imported projects
 *creator.user*
+
+#Custom
 .DS_Store
 binaries
+qtinitproj-lib/build
+qtinitproj-tests/build
+qtinitproj-ui/build
