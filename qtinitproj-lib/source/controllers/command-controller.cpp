@@ -37,7 +37,7 @@ CommandController::~CommandController()
 
 QQmlListProperty<Command> CommandController::ui_dashboardViewContextCommands()
 {
-    return QQmlListProperty<Command>(this, implementation->dashboardViewContextCommands);
+    return QQmlListProperty<Command>(this, &implementation->dashboardViewContextCommands);
 }
 
 void CommandController::onDashboardSaveExecuted()
